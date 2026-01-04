@@ -1286,4 +1286,4 @@ Built with amazing open-source libraries:
 
 **Made with ❤️ for the C++ community**
 
-*Version 0.1.0 - January 2026*
+*Version 0.1.0 - March 2025*
