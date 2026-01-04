@@ -2,7 +2,7 @@
 
 A modern, interactive C++ notebook environment inspired by Jupyter, built with C++20, ImGui, and SDL2. Write, execute, and visualize C++ code in an intuitive cell-based interface.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![C++](https://img.shields.io/badge/C++-20-00599C?logo=cplusplus)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -528,12 +528,6 @@ git push origin feature/your-feature-name
 
 ---
 
-## 📄 License
-
-MIT License - see LICENSE file for details
-
----
-
 ## 🙏 Acknowledgments
 
 Built with amazing open-source libraries:
@@ -546,20 +540,6 @@ Built with amazing open-source libraries:
 
 ---
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/cppnb/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/cppnb/discussions)
-- **Email**: your.email@example.com
-
----
-
-## ⭐ Star Us!
-
-If you find this project useful, please consider giving it a star on GitHub!
-
----
-
 **Made with ❤️ for the C++ community**
 
-*Version 1.0.0 - November 2025*
+*Version 0.1.0 - March 2025*
