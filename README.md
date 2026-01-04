@@ -1,5 +1,7 @@
 # Interactive C++ Development Through Persistent Execution Contexts: A Notebook-Based Approach
 
+**cpp-notebook** is a native interactive C++ notebook environment that lets you write and run C++ code cell by cell with persistent state — no Python or Jupyter backend required. It's built with Dear ImGui, Markdown cells, and real-time execution context.
+
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![C++](https://img.shields.io/badge/C++-20-00599C?logo=cplusplus)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
@@ -9,15 +11,67 @@
 
 ## Abstract
 
-We present **cppnb**, an interactive notebook environment for C++ that fundamentally rethinks how compiled languages can be used for exploratory programming. Unlike traditional C++ development workflows that require complete program compilation, our system enables cell-based execution with persistent state—similar to interpreted languages like Python, but maintaining C++'s compile-time guarantees and performance characteristics.
+**cppnb** brings Jupyter-style interactive notebooks to C++. Write code in cells, run them individually, and watch variables, functions, and classes persist across executions—just like Python, but with C++'s compile-time safety and zero-cost abstractions.
 
-The core innovation lies in our execution engine that maintains a global context across cell executions. When you define a variable in one cell, it remains accessible in all subsequent cells. When you update that variable, the change persists. This seemingly simple behavior requires solving a fundamental incompatibility: C++ is compiled, not interpreted. You can't just "remember" variables between compilations like you can with Python.
+The key challenge: C++ is compiled, not interpreted. When a program exits, everything is gone. We solve this by maintaining an execution context that tracks all variables, functions, and classes. For each cell execution, we regenerate a complete C++ program incorporating the entire context plus the new cell code, compile it with g++, run it, and display results. To the user, it feels interactive. To the compiler, each run is a fresh, valid C++ program.
 
-Our solution reconstructs a complete C++ program for each cell execution, incorporating all previously defined variables (with their current values), functions, and classes. This approach eliminates the traditional compile-link-run cycle while preserving type safety and enabling the use of templates, operator overloading, and other C++ features that make the language powerful.
-
-Built on ImGui for immediate-mode rendering and SDL2 for cross-platform support, cppnb provides a modern interface with syntax highlighting, markdown documentation cells, variable inspection, and comprehensive error reporting. The system demonstrates that compiled languages can support interactive workflows without sacrificing their core strengths.
+Built on Dear ImGui and SDL2, the system includes syntax highlighting, markdown documentation, variable inspection panels, and real-time error reporting. No Python. No Jupyter kernel. Just native C++ from start to finish.
 
 ![Screenshot: Main Interface](https://github-production-user-asset-6210df.s3.amazonaws.com/142775323/531708364-754ccb44-330f-49ce-9758-9d3bac38048e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260104T083504Z&X-Amz-Expires=300&X-Amz-Signature=f78ee9318a95ae6a7a8b7db49f3fd4d1e6e851b3eca0f98d207603afbc2858b9&X-Amz-SignedHeaders=host)
+
+---
+
+## Quick Start
+
+- **Install dependencies:** `brew install cmake sdl2` (macOS) or `sudo apt-get install cmake libsdl2-dev libgl1-mesa-dev` (Linux)
+- **Build:** `git clone <repo> && cd cpp-notebook && mkdir build && cd build && cmake .. && make -j4`
+- **Run:** `./cppnb` and start writing C++ code in cells
+
+---
+
+## 🛠 Version 0.1.0 — First Release (March 2025)
+
+This is the inaugural release of cpp-notebook: a native, interactive C++ notebook environment that brings persistent state and exploratory workflows to compiled C++.
+
+### ✨ What's Included
+
+**Core Features:**
+- Interactive notebook UI powered by Dear ImGui & SDL2
+- Cell-based C++ execution with persistent global context
+- Variables, functions, and classes survive across cell runs
+- Automatic program regeneration and compilation pipeline
+
+**Editor & Documentation:**
+- Syntax-highlighted code editor (C++20 support)
+- Markdown cells with live preview toggle
+- Native keyboard shortcuts (Cmd+C/V/Z, Shift+Enter to run)
+
+**Developer Tools:**
+- Real-time variable inspector showing types and values
+- Function and class outline panels
+- Execution timing and error reporting
+- Color-coded output (green for success, red for errors)
+
+**Build System:**
+- CMake-based cross-platform build
+- macOS and Linux support
+- Dependencies: SDL2, Dear ImGui, ImGuiColorTextEdit
+
+### 🚧 Known Limitations
+
+- No true debugger (breakpoints/stepping)
+- Limited multi-file support
+- Compilation can be slow for large contexts
+- No package manager integration
+- Error messages need better line number mapping
+
+### 🎯 What's Next
+
+- Save/load notebook files (`.cppnb` format)
+- Export to standalone `.cpp` or markdown
+- ImPlot integration for visualization
+- Auto-completion and IntelliSense
+- Precompiled headers for faster compilation
 
 ---
 
