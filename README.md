@@ -20,7 +20,7 @@ Our solution reconstructs a complete C++ program for each cell execution, incorp
 
 Built on ImGui for immediate-mode rendering and SDL2 for cross-platform support, cppnb provides a modern interface with syntax highlighting, markdown documentation cells, variable inspection, and comprehensive error reporting. The system demonstrates that compiled languages can support interactive workflows without sacrificing their core strengths.
 
-![Screenshot: Main Interface](SCREENSHOT_MAIN_INTERFACE_URL)
+![Screenshot: Main Interface](https://github-production-user-asset-6210df.s3.amazonaws.com/142775323/531708364-754ccb44-330f-49ce-9758-9d3bac38048e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260104T083504Z&X-Amz-Expires=300&X-Amz-Signature=f78ee9318a95ae6a7a8b7db49f3fd4d1e6e851b3eca0f98d207603afbc2858b9&X-Amz-SignedHeaders=host)
 
 ---
 
@@ -64,8 +64,6 @@ When you run a cell, our system:
 6. Displays results inline with execution timing
 
 This means each cell produces a complete, valid C++ program. But from the user's perspective, it feels like Python. Variables persist. Functions remain available. You build programs incrementally.
-
-![Screenshot: Cell Execution Flow](SCREENSHOT_CELL_EXECUTION_URL)
 
 ---
 
@@ -152,8 +150,6 @@ if (line matches /^\s*(class|struct)\s+(\w+)/)
 Everything else is treated as a statement to be placed in `main()`.
 
 This isn't perfect—C++ syntax is complex—but it handles common cases well enough for interactive use.
-
-![Screenshot: Variable Inspector](SCREENSHOT_VARIABLE_INSPECTOR_URL)
 
 ### 2.4 The Execution Engine
 
@@ -264,8 +260,6 @@ void drawNotebook() {
 
 No complicated widget trees. No event handlers. Just loops and conditionals.
 
-![Screenshot: Cell Types](SCREENSHOT_CELL_TYPES_URL)
-
 ### 3.2 The Code Editor
 
 For code editing, we use ImGuiColorTextEdit. It provides:
@@ -322,8 +316,6 @@ On the left side, we show a collapsible sidebar with multiple panels:
 **Variable Inspector**: Detailed view of variable types and values
 
 This gives you a bird's-eye view of your notebook's structure. You can see what's defined, what types everything has, and navigate large notebooks easily.
-
-![Screenshot: Sidebar Inspector](SCREENSHOT_SIDEBAR_URL)
 
 ---
 
@@ -419,8 +411,6 @@ string adjustErrorMessages(const string& compilerOutput, int contextLines) {
 ```
 
 This makes errors appear to reference the user's code, not the generated program.
-
-![Screenshot: Error Handling](SCREENSHOT_ERROR_URL)
 
 ### 4.4 Performance Optimization
 
@@ -722,8 +712,6 @@ Output:
 Found 4 at position 3
 Sum = 28
 ```
-
-![Screenshot: Example Session](SCREENSHOT_EXAMPLE_SESSION_URL)
 
 ---
 
