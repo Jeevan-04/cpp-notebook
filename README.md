@@ -1,8 +1,5 @@
 # Interactive C++ Development Through Persistent Execution Contexts: A Notebook-Based Approach
 
-**Jeevan**  
-*January 2026*
-
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![C++](https://img.shields.io/badge/C++-20-00599C?logo=cplusplus)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
