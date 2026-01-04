@@ -5,7 +5,8 @@
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![C++](https://img.shields.io/badge/C++-20-00599C?logo=cplusplus)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Release](https://img.shields.io/github/v/release/Jeevan-04/cpp-notebook)
+![License](https://img.shields.io/github/license/Jeevan-04/cpp-notebook)
 
 ---
 
