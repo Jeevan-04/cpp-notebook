@@ -1,0 +1,40 @@
+# Project metadata (personal)
+hello.json
+
+# Build artifacts
+build/
+*.o
+*.out
+*.exe
+cppnb
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# ImGui configuration
+imgui.ini
+
+# Compiled binaries
+*.dylib
+*.so
+*.a
+*.lib
+*.dll
