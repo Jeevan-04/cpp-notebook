@@ -29,52 +29,6 @@ Built on Dear ImGui and SDL2, the system includes syntax highlighting, markdown 
 
 ---
 
-## 🛠 Version 0.1.0 — First Release (March 2025)
-
-This is the inaugural release of cpp-notebook: a native, interactive C++ notebook environment that brings persistent state and exploratory workflows to compiled C++.
-
-### ✨ What's Included
-
-**Core Features:**
-- Interactive notebook UI powered by Dear ImGui & SDL2
-- Cell-based C++ execution with persistent global context
-- Variables, functions, and classes survive across cell runs
-- Automatic program regeneration and compilation pipeline
-
-**Editor & Documentation:**
-- Syntax-highlighted code editor (C++20 support)
-- Markdown cells with live preview toggle
-- Native keyboard shortcuts (Cmd+C/V/Z, Shift+Enter to run)
-
-**Developer Tools:**
-- Real-time variable inspector showing types and values
-- Function and class outline panels
-- Execution timing and error reporting
-- Color-coded output (green for success, red for errors)
-
-**Build System:**
-- CMake-based cross-platform build
-- macOS and Linux support
-- Dependencies: SDL2, Dear ImGui, ImGuiColorTextEdit
-
-### 🚧 Known Limitations
-
-- No true debugger (breakpoints/stepping)
-- Limited multi-file support
-- Compilation can be slow for large contexts
-- No package manager integration
-- Error messages need better line number mapping
-
-### 🎯 What's Next
-
-- Save/load notebook files (`.cppnb` format)
-- Export to standalone `.cpp` or markdown
-- ImPlot integration for visualization
-- Auto-completion and IntelliSense
-- Precompiled headers for faster compilation
-
----
-
 ## 1. Introduction
 
 ### 1.1 The Problem with C++ Development
